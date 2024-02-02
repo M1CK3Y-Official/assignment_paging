@@ -73,7 +73,7 @@ const ImageSearch = () => {
         <div className={styles.container}>
 
             <div>
-                <h2>Side: {currentPage}</h2>
+                <h2>Side: {currentPage} / {totalPages}</h2>
                 <Link href={createUrl(currentPage - 1)} className={prevDeactivateClass}>PREV</Link>
                 <Link href={createUrl(currentPage + 1)} className={nextDeactivateClass}>NEXT</Link>
             </div>
