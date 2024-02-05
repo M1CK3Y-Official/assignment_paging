@@ -209,7 +209,7 @@ export const fetchImagesByAuthorName = async (author) => {
     try {
 
         await dbConnect();
-        let result = await imageModel.find({author : author });
+        let result = await imageModel.find({author :  { $regex:'.*' + author + '.*', $options: 'i' } });
     
         return JSON.parse(JSON.stringify(result))
 
